@@ -28,3 +28,6 @@ auto-verify-presentation: true
 auto-respond-presentation-request: true
 
 preserve-exchange-records: true
+
+plugin:
+  - webvh
