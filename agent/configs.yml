@@ -31,3 +31,6 @@ preserve-exchange-records: true
 
 plugin:
   - webvh
+
+plugin-config-value:
+  - did-webvh.server_url=https://demo.identifier.me
