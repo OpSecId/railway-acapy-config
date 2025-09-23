@@ -7,4 +7,4 @@ RUN pip install git+https://github.com/openwallet-foundation/acapy-plugins@1.3.2
 USER $user
 COPY ./configs.yml configs.yml
 
-CMD ["aca-py", "start", "--arg-file", "configs.yml"]
+CMD ["start", "--arg-file", "configs.yml"]
