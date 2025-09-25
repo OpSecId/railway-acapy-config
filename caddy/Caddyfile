@@ -1,4 +1,4 @@
-:2019 {
+:80 {
     @ws {
         header Connection *Upgrade*
         header Upgrade websocket
@@ -6,7 +6,6 @@
     handle @ws {
         reverse_proxy {$AGENT_HOST}:8021
     }
-
     handle {
         reverse_proxy {$AGENT_HOST}:8022
     }
