@@ -22,8 +22,8 @@ auto-ping-connection: true
 auto-respond-messages: true
 
 # Toolbox Plugin
-plugin:
-  - firebase_push_notifications
+# plugin:
+#   - firebase_push_notifications
 # Print an admin invite
 connections-invite: true
 invite-multi-use: true
