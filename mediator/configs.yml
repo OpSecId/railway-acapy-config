@@ -1,0 +1,29 @@
+# General
+admin: [0.0.0.0, 80]
+inbound-transport:
+   - [ws, 0:0:0:0:0:0:0:0, 8021]
+   - [http, 0:0:0:0:0:0:0:0, 8022]
+outbound-transport: [ws, http]
+
+# Mediator does not use a ledger
+no-ledger: true
+
+wallet-type: askar-anoncreds
+
+# Mediation
+open-mediation: true
+enable-undelivered-queue: true
+
+# Connections
+debug-connections: true
+auto-accept-invites: true
+auto-accept-requests: true
+auto-ping-connection: true
+auto-respond-messages: true
+
+# Toolbox Plugin
+plugin:
+  - firebase_push_notifications
+# Print an admin invite
+connections-invite: true
+invite-multi-use: true
