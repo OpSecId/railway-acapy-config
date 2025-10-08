@@ -25,5 +25,5 @@ auto-respond-messages: true
 # plugin:
 #   - firebase_push_notifications
 # Print an admin invite
-connections-invite: true
-invite-multi-use: true
+# connections-invite: true
+# invite-multi-use: true
