@@ -1,12 +1,12 @@
-:80 {
+:{$CADDY_PORT} {
 	@ws {
 		header Connection *Upgrade*
 		header Upgrade websocket
 	}
 	handle @ws {
-		reverse_proxy {$AGENT_HOST}:8021
+		reverse_proxy {$AGENT_HOST}:{$AGENT_PORT_WS}
 	}
 	handle {
-		reverse_proxy {$AGENT_HOST}:8022
+		reverse_proxy {$AGENT_HOST}:{$AGENT_PORT_HTTPT}
 	}
 }
