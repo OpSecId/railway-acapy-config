@@ -34,7 +34,7 @@
                   "handler": "reverse_proxy",
                   "upstreams": [
                     {
-                      "dial": "{env.AGENT_HOST}:{env.AGENT_PORT_HTTPT}"
+                      "dial": "{env.AGENT_HOST}:{env.AGENT_PORT_HTTP}"
                     }
                   ]
                 }
