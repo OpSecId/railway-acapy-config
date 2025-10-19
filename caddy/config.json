@@ -3,7 +3,7 @@
     "http": {
       "servers": {
         "srv0": {
-          "listen": [":{$CADDY_PORT}"],
+          "listen": [":{env.CADDY_PORT}"],
           "routes": [
             {
               "match": [
@@ -19,7 +19,7 @@
                   "handler": "reverse_proxy",
                   "upstreams": [
                     {
-                      "dial": "{$AGENT_HOST}:{$AGENT_PORT_WS}"
+                      "dial": "{env.AGENT_HOST}:{env.AGENT_PORT_WS}"
                     }
                   ]
                 }
@@ -34,7 +34,7 @@
                   "handler": "reverse_proxy",
                   "upstreams": [
                     {
-                      "dial": "{$AGENT_HOST}:{$AGENT_PORT_HTTPT}"
+                      "dial": "{env.AGENT_HOST}:{env.AGENT_PORT_HTTPT}"
                     }
                   ]
                 }
