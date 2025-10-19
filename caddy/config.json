@@ -1,0 +1,48 @@
+{
+  "apps": {
+    "http": {
+      "servers": {
+        "srv0": {
+          "listen": [":{$CADDY_PORT}"],
+          "routes": [
+            {
+              "match": [
+                {
+                  "header": {
+                    "Connection": ["*Upgrade*"],
+                    "Upgrade": ["websocket"]
+                  }
+                }
+              ],
+              "handle": [
+                {
+                  "handler": "reverse_proxy",
+                  "upstreams": [
+                    {
+                      "dial": "{$AGENT_HOST}:{$AGENT_PORT_WS}"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "match": [
+                {}
+              ],
+              "handle": [
+                {
+                  "handler": "reverse_proxy",
+                  "upstreams": [
+                    {
+                      "dial": "{$AGENT_HOST}:{$AGENT_PORT_HTTPT}"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}
