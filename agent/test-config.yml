@@ -3,6 +3,6 @@ no-ledger: true
 no-transport: true
 auto-provision: true
 admin: [0.0.0.0, 8020]
-admin-insecure:
+admin-insecure: true
 wallet-name: test_wallet_name
 wallet-key: test_wallet_key
